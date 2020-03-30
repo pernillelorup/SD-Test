@@ -8,7 +8,7 @@
 * Rasmus Hellsgaun aka Rasmus H8r
 * Pernille Lørup
 
-![pickyBank](../../pickyBank.png)
+![pickyBank](pickyBank.png)
 
 #### The drawing above mocks the functionality of our future bank frontend. 
 
