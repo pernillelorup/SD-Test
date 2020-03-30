@@ -8,7 +8,7 @@
 
 ______
 
-![TestDiagram](TestDiagram.png)
+![TestDiagram](../TestDiagram.png)
 
 Given the diagram above we have implemented the required classes and their respective tests using a Test-Driven Design approach. 
 
