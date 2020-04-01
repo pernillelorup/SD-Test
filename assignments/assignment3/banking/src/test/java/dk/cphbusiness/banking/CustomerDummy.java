@@ -5,7 +5,7 @@ import java.util.List;
 public class CustomerDummy implements Customer {
 
   @Override
-  public void transfer(long amount, Account account, Customer target) {
+  public void transfer(double amount, Account account, Customer target) {
 
   }
 

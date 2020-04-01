@@ -19,17 +19,17 @@ public class AccountDummy implements Account {
     }
 
     @Override
-    public long getBalance() {
+    public double getBalance() {
         return 0;
     }
 
     @Override
-    public void addMovement(Account source, Account target, long amount) {
+    public void addMovement(Account source, Account target, double amount) {
 
     }
 
     @Override
-    public void updateBalance(long amount) {
+    public void updateBalance(double amount) {
 
     }
 
@@ -39,12 +39,12 @@ public class AccountDummy implements Account {
     }
 
     @Override
-    public void transfer(long amount, Account target) {
+    public void transfer(double amount, Account target) {
 
     }
 
     @Override
-    public void transfer(long amount, String targetNumber) {
+    public void transfer(double amount, String targetNumber) {
 
     }
 }

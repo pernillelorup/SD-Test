@@ -35,7 +35,7 @@ public class RealCustomer implements Customer {
     }
 
     @Override
-    public void transfer(long amount, Account account, Customer target) {
+    public void transfer(double amount, Account account, Customer target) {
         account.transfer(amount, target.getAccounts().get(0));
     }
 

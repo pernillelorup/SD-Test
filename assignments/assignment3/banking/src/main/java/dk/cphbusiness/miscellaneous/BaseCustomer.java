@@ -10,7 +10,7 @@ public class BaseCustomer implements Customer {
   public BaseCustomer(String number, String name) { }
 
   @Override
-  public void transfer(long amount, Account account, Customer target) {
+  public void transfer(double amount, Account account, Customer target) {
 
   }
 

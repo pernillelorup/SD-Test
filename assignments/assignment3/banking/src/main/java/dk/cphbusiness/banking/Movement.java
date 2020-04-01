@@ -6,10 +6,10 @@ public class Movement {
 
     private Account source;
     private Account target;
-    private long amount;
+    private double amount;
     private Date timestamp;
 
-    public Movement(Account source, Account target, long amount, Date timestamp) {
+    public Movement(Account source, Account target, double amount, Date timestamp) {
         this.source = source;
         this.target = target;
         this.amount = amount;
@@ -24,7 +24,7 @@ public class Movement {
         return target;
     }
 
-    public long getAmount() {
+    public double getAmount() {
         return amount;
     }
 

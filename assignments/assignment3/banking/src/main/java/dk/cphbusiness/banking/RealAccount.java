@@ -8,7 +8,7 @@ public class RealAccount implements Account {
     private Bank bank;
     private Customer customer;
     private String number;
-    private long balance = 0;
+    private double balance = 0;
     private List<Movement> movements;
 
     public RealAccount(Bank bank, Customer customer, String number) {
@@ -18,7 +18,7 @@ public class RealAccount implements Account {
         this.movements = new ArrayList<>();
     }
 
-    public RealAccount(Bank bank, Customer customer, String number, long balance) {
+    public RealAccount(Bank bank, Customer customer, String number, double balance) {
         this.bank = bank;
         this.customer = customer;
         this.number = number;
@@ -42,17 +42,17 @@ public class RealAccount implements Account {
     }
 
     @Override
-    public long getBalance() {
+    public double getBalance() {
         return balance;
     }
 
     @Override
-    public void addMovement(Account source, Account target, long amount) {
+    public void addMovement(Account source, Account target, double amount) {
         movements.add(new Movement(source, target, amount, new Date()));
     }
 
     @Override
-    public void updateBalance(long amount) {
+    public void updateBalance(double amount) {
       balance += amount;
     }
 
@@ -62,7 +62,7 @@ public class RealAccount implements Account {
     }
 
     @Override
-    public void transfer(long amount, Account target) {
+    public void transfer(double amount, Account target) {
         updateBalance(-amount);
         target.updateBalance(amount);
         addMovement(this, target, -amount);
@@ -70,7 +70,7 @@ public class RealAccount implements Account {
     }
 
     @Override
-    public void transfer(long amount, String targetNumber) {
+    public void transfer(double amount, String targetNumber) {
         Account target = bank.getAccount(targetNumber);
         transfer(amount, target);
     }

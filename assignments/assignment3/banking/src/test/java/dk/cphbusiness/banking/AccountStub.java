@@ -4,9 +4,9 @@ import java.util.List;
 
 public class AccountStub implements Account {
     private String number;
-    private long balance = 0;
+    private double balance = 0;
 
-    public AccountStub(String number, long balance){
+    public AccountStub(String number, double balance){
         this.number = number;
         this.balance = balance;
     }
@@ -31,16 +31,16 @@ public class AccountStub implements Account {
     }
 
     @Override
-    public long getBalance() {
+    public double getBalance() {
         return balance;
     }
 
     @Override
-    public void addMovement(Account source, Account target, long amount) {
+    public void addMovement(Account source, Account target, double amount) {
     }
 
     @Override
-    public void updateBalance(long amount) {
+    public void updateBalance(double amount) {
         balance += amount;
     }
 
@@ -50,13 +50,13 @@ public class AccountStub implements Account {
     }
 
     @Override
-    public void transfer(long amount, Account target) {
+    public void transfer(double amount, Account target) {
         updateBalance(-amount);
         target.updateBalance(amount);
     }
 
     @Override
-    public void transfer(long amount, String targetNumber) {
+    public void transfer(double amount, String targetNumber) {
 
     }
 }
