@@ -1,4 +1,4 @@
-package bankingtest;
+package contractTest;
 
 import DTO.AccountDTO;
 import DTO.MovementDTO;
